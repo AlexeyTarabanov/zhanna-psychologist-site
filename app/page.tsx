@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ArrowUpRight, Brain, Check, HeartHandshake, MapPin, MessageCircle, Monitor, ShieldCheck, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -43,7 +42,7 @@ export default function Home() {
         </div>
         <div className="portrait-wrap">
           <div className="portrait-shape" aria-hidden="true" />
-          <Image src="/zhanna.jpg" alt="Психолог Жанна Тарабанова" width={960} height={1200} priority className="portrait" />
+          <img src="/zhanna.jpg" alt="Психолог Жанна Тарабанова" width={960} height={1200} className="portrait" />
           <div className="portrait-note"><MessageCircle aria-hidden="true" /><span><strong>50–55 минут</strong> спокойного разговора о том, что важно</span></div>
         </div>
       </section>
