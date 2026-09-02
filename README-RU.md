@@ -46,6 +46,18 @@ npm run build
 
 Результат сборки появится в каталоге `dist/`.
 
+## GitHub Pages и домен
+
+Сайт публикуется как статическая сборка Vite через GitHub Pages. Основной production-домен:
+
+```text
+https://jeanna-psy.ru/
+```
+
+Файл `public/CNAME` должен оставаться в проекте: при сборке он попадает в `dist/CNAME` и сохраняет custom domain в GitHub Pages.
+
+SEO-URL в `index.html`, `public/robots.txt` и `public/sitemap.xml` должны указывать на `https://jeanna-psy.ru/`, а не на технический адрес `github.io`.
+
 ## Docker
 
 Сборка образа:

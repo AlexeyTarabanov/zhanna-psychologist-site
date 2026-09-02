@@ -40,8 +40,25 @@ test("build emits static site shell and public photo", async () => {
   const photo = await stat(path.join(dist, "zhanna.jpg"));
 
   assert.match(html, /<div id="root"><\/div>/);
-  assert.match(html, /Жанна Тарабанова — психолог/);
+  assert.match(html, /Психолог Жанна Тарабанова — консультации онлайн/);
+  assert.match(html, /<meta name="robots" content="index, follow" \/>/);
+  assert.match(html, /<link rel="canonical" href="https:\/\/jeanna-psy\.ru\/" \/>/);
   assert.ok(photo.size > 100_000);
+});
+
+test("build emits robots and sitemap files", async () => {
+  const robots = await readFile(path.join(dist, "robots.txt"), "utf8");
+  const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
+
+  assert.match(robots, /User-agent: \*/);
+  assert.match(robots, /Sitemap: https:\/\/jeanna-psy\.ru\/sitemap\.xml/);
+  assert.match(sitemap, /<loc>https:\/\/jeanna-psy\.ru\/<\/loc>/);
+});
+
+test("build emits github pages custom domain", async () => {
+  const cname = await readFile(path.join(dist, "CNAME"), "utf8");
+
+  assert.equal(cname.trim(), "jeanna-psy.ru");
 });
 
 test("build includes the expected visual styles", async () => {

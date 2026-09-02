@@ -26,16 +26,16 @@ export default function Home() {
         <nav aria-label="Навигация">
           <a href="#requests">С чем работаю</a><a href="#about">Обо мне</a><a href="#format">Формат</a>
         </nav>
-        <Button asChild className="header-cta"><a href="https://t.me/Jeanna_T" target="_blank" rel="noreferrer">Написать в Telegram</a></Button>
+        <Button asChild className="header-cta"><a href="https://t.me/Jeanna_T" target="_blank" rel="noopener noreferrer">Написать в Telegram</a></Button>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow"><Sparkles aria-hidden="true" /> Психолог для взрослых и подростков</p>
-          <h1>Место, где можно быть <em>собой</em></h1>
+          <h1>Психолог Жанна Тарабанова — место, где можно быть <em>собой</em></h1>
           <p className="hero-lead">Помогаю бережно разобраться в чувствах, увидеть привычные сценарии и найти опору внутри — без оценок, давления и готовых рецептов.</p>
           <div className="hero-actions">
-            <Button asChild size="lg" className="primary-cta"><a href="https://t.me/Jeanna_T" target="_blank" rel="noreferrer">Записаться на консультацию <ArrowUpRight aria-hidden="true" /></a></Button>
+            <Button asChild size="lg" className="primary-cta"><a href="https://t.me/Jeanna_T" target="_blank" rel="noopener noreferrer">Записаться на консультацию <ArrowUpRight aria-hidden="true" /></a></Button>
             <a className="text-link" href="#format">Как проходят встречи</a>
           </div>
           <div className="quick-facts"><span><Monitor aria-hidden="true" /> Онлайн по всему миру</span><span><MapPin aria-hidden="true" /> Очно в Санкт-Петербурге</span></div>
@@ -65,10 +65,10 @@ export default function Home() {
 
       <section className="section format-section" id="format">
         <div className="format-copy"><p className="eyebrow">Формат работы</p><h2>Начнём со знакомства и вашего запроса</h2><p>На первой встрече обсудим, что привело вас в терапию и чего вы хотели бы изменить. Дальше будем двигаться в комфортном для вас темпе, периодически сверяясь с целями.</p></div>
-        <div className="price-card"><p>Индивидуальная консультация</p><div className="price">3 500 ₽</div><span>50–55 минут</span><hr /><div className="price-details"><span><Monitor aria-hidden="true" /> Онлайн</span><span><MapPin aria-hidden="true" /> Санкт-Петербург</span></div><Button asChild size="lg" className="price-button"><a href="https://t.me/Jeanna_T" target="_blank" rel="noreferrer">Написать Жанне в Telegram <ArrowUpRight aria-hidden="true" /></a></Button></div>
+        <div className="price-card"><p>Индивидуальная консультация</p><div className="price">3 500 ₽</div><span>50–55 минут</span><hr /><div className="price-details"><span><Monitor aria-hidden="true" /> Онлайн</span><span><MapPin aria-hidden="true" /> Санкт-Петербург</span></div><Button asChild size="lg" className="price-button"><a href="https://t.me/Jeanna_T" target="_blank" rel="noopener noreferrer">Написать Жанне в Telegram <ArrowUpRight aria-hidden="true" /></a></Button></div>
       </section>
 
-      <section className="closing-section"><p className="eyebrow">Можно не ждать, пока станет совсем тяжело</p><h2>Первый шаг — просто написать</h2><p>Расскажите в двух словах, что вас беспокоит, и договоримся о встрече.</p><Button asChild size="lg" className="closing-button"><a href="https://t.me/Jeanna_T" target="_blank" rel="noreferrer">Открыть Telegram <ArrowUpRight aria-hidden="true" /></a></Button></section>
+      <section className="closing-section"><p className="eyebrow">Можно не ждать, пока станет совсем тяжело</p><h2>Первый шаг — просто написать</h2><p>Расскажите в двух словах, что вас беспокоит, и договоримся о встрече.</p><Button asChild size="lg" className="closing-button"><a href="https://t.me/Jeanna_T" target="_blank" rel="noopener noreferrer">Открыть Telegram <ArrowUpRight aria-hidden="true" /></a></Button></section>
 
       <footer><div><strong>Жанна Тарабанова</strong><span>Психолог · Санкт-Петербург и онлайн</span></div><p>Психологическая консультация не заменяет медицинскую помощь. При угрозе жизни или здоровью обратитесь в экстренную службу вашего региона.</p><span>© 2026</span></footer>
     </main>
