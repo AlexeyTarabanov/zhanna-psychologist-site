@@ -94,6 +94,7 @@ footer { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 50px 0;
 footer div { display: flex; flex-direction: column; gap: 6px; }
 footer strong { color: var(--ink); font-family: Georgia, serif; font-size: 18px; }
 footer p { margin: 0; }
+.footer-meta { align-items: flex-end; white-space: nowrap; }
 
 @media (max-width: 900px) {
   nav { display: none; }
