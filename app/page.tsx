@@ -70,7 +70,7 @@ export default function Home() {
 
       <section className="closing-section"><p className="eyebrow">Можно не ждать, пока станет совсем тяжело</p><h2>Первый шаг — просто написать</h2><p>Расскажите в двух словах, что вас беспокоит, и договоримся о встрече.</p><Button asChild size="lg" className="closing-button"><a href="https://t.me/Jeanna_T" target="_blank" rel="noopener noreferrer">Открыть Telegram <ArrowUpRight aria-hidden="true" /></a></Button></section>
 
-      <footer><div><strong>Жанна Тарабанова</strong><span>Психолог · Санкт-Петербург и онлайн</span></div><p>Психологическая консультация не заменяет медицинскую помощь. При угрозе жизни или здоровью обратитесь в экстренную службу вашего региона.</p><div className="footer-meta"><span>© 2026</span><a href="https://alexeytarabanov.ru" target="_blank" rel="noopener noreferrer">Сайт разработан</a></div></footer>
+      <footer><div><strong>Жанна Тарабанова</strong><span>Психолог · Санкт-Петербург и онлайн</span></div><p>Психологическая консультация не заменяет медицинскую помощь. При угрозе жизни или здоровью обратитесь в экстренную службу вашего региона.</p><div className="footer-meta"><span>© 2026</span><a href="https://alexeytarabanov.ru" target="_blank" rel="noopener noreferrer">Сайт разработан AT</a></div></footer>
     </main>
   );
 }
