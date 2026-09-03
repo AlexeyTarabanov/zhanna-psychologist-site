@@ -1,3 +1,4 @@
+import { useEffect, type ReactNode } from "react";
 import { ArrowUpRight, Brain, Check, HeartHandshake, MapPin, MessageCircle, Monitor, ShieldCheck, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -18,9 +19,35 @@ const education = [
   "Комплексная стратегия работы с нарушениями пищевого поведения — Докмед Академия и Женя Донова",
 ];
 
+function OknaBookingScript() {
+  useEffect(() => {
+    const scriptSrc = "https://okna.digital/embed.js";
+
+    if (document.querySelector(`script[src="${scriptSrc}"]`)) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = scriptSrc;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+  return null;
+}
+
+function OknaBookingButton({ children, className }: { children: ReactNode; className: string }) {
+  return (
+    <Button type="button" size="lg" className={className} data-okna-booking-popup="zhanna/jeanna">
+      {children}
+    </Button>
+  );
+}
+
 export default function Home() {
   return (
     <main>
+      <OknaBookingScript />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="В начало страницы">Жанна Тарабанова</a>
         <nav aria-label="Навигация">
@@ -35,7 +62,7 @@ export default function Home() {
           <h1>Психолог Жанна Тарабанова — место, где можно быть <em>собой</em></h1>
           <p className="hero-lead">Помогаю бережно разобраться в чувствах, увидеть привычные сценарии и найти опору внутри — без оценок, давления и готовых рецептов.</p>
           <div className="hero-actions">
-            <Button asChild size="lg" className="primary-cta"><a href="https://t.me/Jeanna_T" target="_blank" rel="noopener noreferrer">Записаться на консультацию <ArrowUpRight aria-hidden="true" /></a></Button>
+            <OknaBookingButton className="primary-cta">Записаться на консультацию <ArrowUpRight aria-hidden="true" /></OknaBookingButton>
             <a className="text-link" href="#format">Как проходят встречи</a>
           </div>
           <div className="quick-facts"><span><Monitor aria-hidden="true" /> Онлайн по всему миру</span><span><MapPin aria-hidden="true" /> Очно в Санкт-Петербурге</span></div>
@@ -65,7 +92,7 @@ export default function Home() {
 
       <section className="section format-section" id="format">
         <div className="format-copy"><p className="eyebrow">Формат работы</p><h2>Начнём со знакомства и вашего запроса</h2><p>На первой встрече обсудим, что привело вас в терапию и чего вы хотели бы изменить. Дальше будем двигаться в комфортном для вас темпе, периодически сверяясь с целями.</p></div>
-        <div className="price-card"><p>Индивидуальная консультация</p><div className="price">3 500 ₽</div><span>50–55 минут</span><hr /><div className="price-details"><span><Monitor aria-hidden="true" /> Онлайн</span><span><MapPin aria-hidden="true" /> Санкт-Петербург</span></div><Button asChild size="lg" className="price-button"><a href="https://t.me/Jeanna_T" target="_blank" rel="noopener noreferrer">Написать Жанне в Telegram <ArrowUpRight aria-hidden="true" /></a></Button></div>
+        <div className="price-card"><p>Индивидуальная консультация</p><div className="price">3 500 ₽</div><span>50–55 минут</span><hr /><div className="price-details"><span><Monitor aria-hidden="true" /> Онлайн</span><span><MapPin aria-hidden="true" /> Санкт-Петербург</span></div><OknaBookingButton className="price-button">Записаться <ArrowUpRight aria-hidden="true" /></OknaBookingButton></div>
       </section>
 
       <section className="closing-section"><p className="eyebrow">Можно не ждать, пока станет совсем тяжело</p><h2>Первый шаг — просто написать</h2><p>Расскажите в двух словах, что вас беспокоит, и договоримся о встрече.</p><Button asChild size="lg" className="closing-button"><a href="https://t.me/Jeanna_T" target="_blank" rel="noopener noreferrer">Открыть Telegram <ArrowUpRight aria-hidden="true" /></a></Button></section>

@@ -155,7 +155,7 @@ http://localhost:8080
 ## Основные файлы
 
 - `src/main.tsx` — точка входа Vite/React.
-- `app/page.tsx` — содержимое страницы.
+- `app/page.tsx` — содержимое страницы и клиентская интеграция виджета записи Okna.
 - `app/globals.css` — дизайн и адаптивная вёрстка.
 - `public/zhanna.jpg` — фотография Жанны.
 - `Dockerfile` — многоэтапная сборка: Node.js 22 для build, Nginx для runtime.
@@ -169,6 +169,22 @@ http://localhost:8080
 ```text
 https://t.me/Jeanna_T
 ```
+
+## Виджет записи Okna
+
+На странице подключён popup-виджет записи Okna:
+
+```text
+zhanna/jeanna
+```
+
+Кнопки записи находятся в `app/page.tsx` и используют атрибут:
+
+```tsx
+<button data-okna-booking-popup="zhanna/jeanna">Записаться</button>
+```
+
+Скрипт `https://okna.digital/embed.js` подключается на клиенте после монтирования компонента, чтобы внешний код запускался уже после появления кнопок записи в DOM.
 
 ## Важно
 
